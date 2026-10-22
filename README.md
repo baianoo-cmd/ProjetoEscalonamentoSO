@@ -4,8 +4,9 @@ Este é um projeto da disciplina de **Sistemas Operacionais** do curso de Análi
 
 O grupo é composto por:
 
-*aluno1* </br>
-*aluno2* </br>
-*aluno3* </br>
-*aluno4* </br>
+*Raissa Gomes Carneiro* </br>
+*Fernanda Amille Pereira Santos* </br>
+*Fernanda Magalhães de Souza* </br>
+*Enzo Gabriel Lima Dias* </br>
+*Anthony Viana dos Santos* </br>
 
