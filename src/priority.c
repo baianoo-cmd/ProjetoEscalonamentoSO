@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "priority.h"
 
 
@@ -46,5 +47,47 @@ void escalonarPriority(struct Processo processos[], int n) {
         concluidos[escolhido] = 1;
         quantidadeConcluidos++;
     }
+}
+
+int main(void){
+    int n;
+
+    printf("Quantidade de processos: ");
+
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("Quantidade invalide. \n");
+        return 1;
+    }
+
+    struct Processo processos[n];
+
+    for(int i = 0; i < n; i++) {
+        processos[i].id = i + 1;
+        printf("\nProcesso P%d\n", processos[i].id);
+
+
+        printf("Tempo de chegada: ");
+        if (scanf("%d", &processos[i].chegada) != 1 || processos[i].chegada < 0) {
+            printf("Tempo de chegada invalido.\n");
+            return 1;
+        }
+
+        printf("Tempo de execução (burst): ");
+        if (scanf ("%d", &processos[i].burst) != 1 || processos[i].burst <= 0) {
+            printf("Tempo de execução invalido.\n");
+            return 1;
+        }
+
+        printf("Prioridade (numero menor = prioridade maior): ");
+        if (scanf("%d", &processos[i].prioridade) != 1) {
+            printf("Prioridade invalida.\n");
+            return 1;
+        }
+    }
+
+    printf("\n - ESCALONAMENTO POR PRIORIDADE - \n");
+    escalonarPriority(processos, n);
+
+    return 0;
 }
 
